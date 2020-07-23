@@ -1,46 +1,25 @@
 'use strict';
 
-const playButton = document.querySelector('.play__button');
-const section = document.querySelector('.section');
-const timerPlay = document.querySelector('.timer-play');
-const test = document.querySelector('.test');
+const display = document.querySelector('.game__display');
+const playBtn = document.querySelector('.game__play-btn');
+const timer = document.querySelector('.game__timer');
 
 // play button click event!
-playButton.addEventListener('click', () => {
-  // timer();
-  xy();
+playBtn.addEventListener('click', () => {
+  console.log('play!');
+  timeCheck();
 });
-
-section.addEventListener('mousemove', (e) => {
-  const x = e.pageX;
-  const y = e.pageY;
-  console.log(`x: ${x}, y: ${y}`);
-});
-
-function xy() {
-  const rect = section1.getBoundingClientRect();
-  const x = rect.top;
-  const xx = rect.bottom;
-  const y = rect.left;
-  const yy = rect.right;
-  console.log(x);
-  console.log(xx);
-  console.log(y);
-  console.log(yy);
-}
 
 // 1. timer function!
-function timer() {
-  let sum = 10;
-  // timer 함수
-  const timer = setInterval(() => {
-    sum = sum - 1;
-    if (sum < 0) {
+function timeCheck() {
+  let time = 10;
+  const timeCheck = setInterval(() => {
+    time -= 1;
+    console.log(time);
+    if (time == 0) {
       alert('time over!');
-      clearInterval(timer);
-      return;
+      clearInterval(timeCheck);
     }
-    timerPlay.innerHTML = `00:0${sum}`;
   }, 1000);
 }
 
