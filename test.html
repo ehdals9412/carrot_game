@@ -5,31 +5,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <style>
-      div {
-        width: 100px;
-        height: 100px;
-        background-color: palegreen;
-        margin: 30px;
+      body {
+        background-color: black;
       }
 
-      img {
+      .div1 {
+        position: relative;
+        width: 300px;
+        height: 300px;
+        margin: 30px auto;
+        background-color: pink;
+      }
+
+      .div2 {
         position: absolute;
-        top: 30px;
-        left: 39px;
-        transform: translate(-50%, -50%);
+        top: 20px;
+        left: 20px;
+        width: 50px;
+        height: 50px;
+        background-color: red;
       }
     </style>
   </head>
   <body>
-    <div></div>
-    <img src="img/bug.png" alt="" />
+    <div class="div1">
+      <div class="div2"></div>
+    </div>
 
     <script>
-      const div = document.querySelector('div');
-
-      div.addEventListener('mousemove', (e) => {
-        console.log(`${e.pageX}, ${e.pageY}`);
-      });
+      const div1 = document.querySelector('.div1');
+      const div2 = document.querySelector('.div2');
     </script>
   </body>
 </html>

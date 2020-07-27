@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Carrot game</title>
     <script
       src="https://kit.fontawesome.com/8a757ff31f.js"
       crossorigin="anonymous"
@@ -13,22 +13,22 @@
   </head>
   <body>
     <!-- 게임화면을 출력하는 display -->
-    <div class="game__display">
+    <section class="game">
       <header class="game__header">
-        <button class="game__play-btn">
+        <button class="game__button">
           <i class="fas fa-play"></i>
           <!-- <i class="fas fa-stop"></i> -->
         </button>
-        <div class="game__timer">
-          00:00
-        </div>
-        <div class="game__count">10</div>
+        <span class="game__timer hide">00:00</span>
+        <span class="game__score hide">9</span>
       </header>
-      <section class="game__section"></section>
-    </div>
-
-    <!-- <div class="section">
-      <img src="img/bug.png" alt="" class="test" />
-    </div> -->
+      <section class="game__field"></section>
+    </section>
+    <section class="pop-up pop-up__hide">
+      <button class="pop-up__refresh">
+        <i class="fas fa-redo-alt"></i>
+      </button>
+      <span class="pop-up__message">Hello?🎉</span>
+    </section>
   </body>
 </html>
